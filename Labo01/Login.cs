@@ -34,7 +34,7 @@ namespace Labo01
 
             string Login, Pwd;
             Login = txt_Login.Text;
-            Pwd = txt_PWD.Text;
+            Pwd = txt_Password.Text;
             if(!string.IsNullOrEmpty(Login) && !string.IsNullOrEmpty(Pwd))
             {
                 ClLogin login = new ClLogin();

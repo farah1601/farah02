@@ -8,7 +8,6 @@ using System.Data.OleDb;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
-using Org.BouncyCastle.Utilities;
 using System.IO;
 
 
@@ -16,25 +15,18 @@ namespace Labo01
 {
     internal class ClLogin
     {
-        //string imageLocation = "";
 
-        MySqlConnection cns = new MySqlConnection("server=localhost;uid=root;pwd=root;database=clogindb");
-        public void Ajouter(string NomComplet, string Username, string Password, string DateNaissance, string Sexe, string Mobile, string Email, string Niveau, string Specialite)
+        MySqlConnection cns = new MySqlConnection("server=localhost;uid=root;database=clogindb1");
+        public void Ajouter(string NometPrenom, string Nom, string Password, string DateNaissance, string Sexe, string Telephone, string Email, string Niveau, string Specialite)
         {
+
             try
             {
-                string Query = "INSERT INTO tblclogin (nomcomplet,username,password,datenaissance,sexe,mobile,email,niveau,specialite) VALUES ('" + NomComplet + "','" + Username + "','" + Password + "','" + DateNaissance+ "','" + Sexe + "','" + Mobile + "','" + Email + "','" + Niveau + "','" + Specialite + "')";
+                string Query = "INSERT INTO etudiant (nometprenom,nom,password,datenaissance,sexe,telephone,email,niveau,specialite) VALUES ('" + NometPrenom + "','" + Nom + "','" + Password + "','" + DateNaissance+ "','" + Sexe + "','" + Telephone + "','" + Email + "','" + Niveau + "','" + Specialite + "')";
                 MySqlCommand cmd = new MySqlCommand(Query);
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = cns;
                 cns.Open();
-
-                //byte[] images = null;
-                //FileStream stream = new FileStream(imageLocation, FileMode.Open, FileAccess.Read);
-                ///BinaryReader brs = new BinaryReader(stream);
-                //images = brs.ReadBytes((int)stream.Length);
-                //cmd.Parameters.Add(new MySqlParameter("@image", images));
-
                 cmd.ExecuteNonQuery();
             }
             catch
@@ -43,11 +35,11 @@ namespace Labo01
             }
         }
 
-        public void Modifier(string Login, string Pwd)
+        public void Modifier(string Login, string Password)
         {
             try
             {
-                string Query = "UPDATE tblclogin SET username='" + Login + "' where password='" + Pwd + "'";
+                string Query = "UPDATE etudiant SET nom='" + Login + "' where password='" + Password + "'";
                 MySqlCommand cmd = new MySqlCommand(Query);
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = cns;
@@ -64,7 +56,7 @@ namespace Labo01
         {
             try
             {
-                string Query = "DELETE FROM tblclogin where id='" + Id + "'";
+                string Query = "DELETE FROM etudiant where id='" + Id + "'";
                 MySqlCommand cmd = new MySqlCommand(Query);
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = cns;
@@ -82,7 +74,7 @@ namespace Labo01
         {
             try
             {
-                string Query = "SELECT * FROM tblclogin ORDER BY username";
+                string Query = "SELECT * FROM etudiant ORDER BY nom";
                 MySqlCommand cmd = new MySqlCommand(Query);
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = cns;
@@ -101,7 +93,7 @@ namespace Labo01
         {
             try
             {
-                string Query = "SELECT * FROM tblclogin";
+                string Query = "SELECT * FROM etudiant";
                 MySqlCommand cmd = new MySqlCommand(Query);
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = cns;
@@ -116,11 +108,11 @@ namespace Labo01
             }
         }
 
-        public MySqlDataReader Chercher(string Username)
+        public MySqlDataReader Chercher(string nom)
         {
             try
             {
-                string Query = "SELECT * FROM tblclogin where username like '%" + Username + "%'";
+                string Query = "SELECT * FROM etudiant where nom like '%" + nom + "%'";
                 MySqlCommand cmd = new MySqlCommand(Query);
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = cns;
@@ -135,12 +127,12 @@ namespace Labo01
             }
         }
 
-        public bool Authentification(string Login, string Pwd)
+        public bool Authentification(string Login, string Password)
         {
             try
             {
                 bool Result = false;
-                string Query = "SELECT * FROM tblclogin WHERE username='" + Login + "' AND password='" + Pwd + "'";
+                string Query = "SELECT * FROM etudiant WHERE nom='" + Login + "' AND password='" + Password + "'";
                 MySqlCommand cmd = new MySqlCommand(Query);
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = cns;

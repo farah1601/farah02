@@ -16,7 +16,7 @@ namespace Labo01
     
     public partial class frmSpecialite : Form
     {
-        public void GetListSpecialite()
+        public void Afficher_Liste_Specialite()
         {
             ClSpecialite Spt = new ClSpecialite();
             MySqlDataReader Rs;
@@ -46,15 +46,15 @@ namespace Labo01
                 {
                 ClSpecialite Spt = new ClSpecialite(); 
                 Spt.Ajouter(xCode,xSpecialite);
-                GetListSpecialite();
+                Afficher_Liste_Specialite();
                 }
                
-            }
+        }
 
         private void Form2_Load(object sender, EventArgs e)
         {
 
-            GetListSpecialite();
+            Afficher_Liste_Specialite();
 
         }
 
@@ -65,7 +65,7 @@ namespace Labo01
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GetListSpecialite();
+            Afficher_Liste_Specialite();
 
         }
 
@@ -89,7 +89,7 @@ namespace Labo01
 
             ClSpecialite Spt = new ClSpecialite();
             Spt.Suppression(xCode);
-            GetListSpecialite();
+            Afficher_Liste_Specialite();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -100,7 +100,27 @@ namespace Labo01
 
             ClSpecialite Spt = new ClSpecialite();
             Spt.Modifier(xCode, xSpecialite);
-            GetListSpecialite();
+            Afficher_Liste_Specialite();
+        }
+
+        private void txt_Specialite_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Code_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.txt_Login = new System.Windows.Forms.TextBox();
-            this.txt_PWD = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txt_Password = new System.Windows.Forms.TextBox();
+            this.lbl_Login = new System.Windows.Forms.Label();
+            this.lbl_Password = new System.Windows.Forms.Label();
             this.bt_Connect = new System.Windows.Forms.Button();
             this.bt_Exit = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -47,37 +47,37 @@
             this.txt_Login.Size = new System.Drawing.Size(210, 28);
             this.txt_Login.TabIndex = 0;
             // 
-            // txt_PWD
+            // txt_Password
             // 
-            this.txt_PWD.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_PWD.ForeColor = System.Drawing.Color.Black;
-            this.txt_PWD.Location = new System.Drawing.Point(109, 62);
-            this.txt_PWD.Name = "txt_PWD";
-            this.txt_PWD.PasswordChar = '*';
-            this.txt_PWD.Size = new System.Drawing.Size(210, 28);
-            this.txt_PWD.TabIndex = 1;
+            this.txt_Password.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Password.ForeColor = System.Drawing.Color.Black;
+            this.txt_Password.Location = new System.Drawing.Point(109, 62);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.PasswordChar = '*';
+            this.txt_Password.Size = new System.Drawing.Size(210, 28);
+            this.txt_Password.TabIndex = 1;
             // 
-            // label1
+            // lbl_Login
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(29, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 22);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Login";
+            this.lbl_Login.AutoSize = true;
+            this.lbl_Login.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Login.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_Login.Location = new System.Drawing.Point(29, 33);
+            this.lbl_Login.Name = "lbl_Login";
+            this.lbl_Login.Size = new System.Drawing.Size(45, 22);
+            this.lbl_Login.TabIndex = 2;
+            this.lbl_Login.Text = "Login";
             // 
-            // label2
+            // lbl_Password
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.IndianRed;
-            this.label2.Location = new System.Drawing.Point(29, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 22);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Password";
+            this.lbl_Password.AutoSize = true;
+            this.lbl_Password.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Password.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_Password.Location = new System.Drawing.Point(29, 65);
+            this.lbl_Password.Name = "lbl_Password";
+            this.lbl_Password.Size = new System.Drawing.Size(74, 22);
+            this.lbl_Password.TabIndex = 3;
+            this.lbl_Password.Text = "Password";
             // 
             // bt_Connect
             // 
@@ -120,9 +120,9 @@
             this.ClientSize = new System.Drawing.Size(347, 150);
             this.Controls.Add(this.bt_Exit);
             this.Controls.Add(this.bt_Connect);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_PWD);
+            this.Controls.Add(this.lbl_Password);
+            this.Controls.Add(this.lbl_Login);
+            this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.txt_Login);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -138,9 +138,9 @@
         #endregion
 
         private System.Windows.Forms.TextBox txt_Login;
-        private System.Windows.Forms.TextBox txt_PWD;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_Password;
+        private System.Windows.Forms.Label lbl_Login;
+        private System.Windows.Forms.Label lbl_Password;
         private System.Windows.Forms.Button bt_Connect;
         private System.Windows.Forms.Button bt_Exit;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

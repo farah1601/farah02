@@ -50,6 +50,7 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Code ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -59,6 +60,7 @@
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Spécialité";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txt_Code
             // 
@@ -66,6 +68,7 @@
             this.txt_Code.Name = "txt_Code";
             this.txt_Code.Size = new System.Drawing.Size(100, 20);
             this.txt_Code.TabIndex = 2;
+            this.txt_Code.TextChanged += new System.EventHandler(this.txt_Code_TextChanged);
             // 
             // txt_Specialite
             // 
@@ -73,6 +76,7 @@
             this.txt_Specialite.Name = "txt_Specialite";
             this.txt_Specialite.Size = new System.Drawing.Size(215, 20);
             this.txt_Specialite.TabIndex = 3;
+            this.txt_Specialite.TextChanged += new System.EventHandler(this.txt_Specialite_TextChanged);
             // 
             // bt_Save
             // 
@@ -143,7 +147,7 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Specialite
+            // frmSpecialite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,7 +164,7 @@
             this.Controls.Add(this.txt_Code);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Specialite";
+            this.Name = "frmSpecialite";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Spécialité";
             this.Load += new System.EventHandler(this.Form2_Load);
